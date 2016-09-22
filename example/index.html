@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="../dist/djviewer.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/djviewer.css">
+	<style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    $(document).ready(function(){
+        djViewer.init();
+
+        djViewer.list = [
+            {code: '0fIACXzBA2j2eaj7GKJ4', src: 'image/0fIACXzBA2j2eaj7GKJ4.jpg', thumb: 'image/thumb/0fIACXzBA2j2eaj7GKJ4.jpg'},
+            {code: '0Q314Hk08RPPhYcWeXvW', src: 'image/0Q314Hk08RPPhYcWeXvW.jpg', thumb: 'image/thumb/0Q314Hk08RPPhYcWeXvW.jpg'},
+            {code: '0V8pgGAsMWfcSHGSyLfx', src: 'image/0V8pgGAsMWfcSHGSyLfx.jpg', thumb: 'image/thumb/0V8pgGAsMWfcSHGSyLfx.jpg'},
+            {code: '1Dy5J8bYNKvYwKu7OwJN', src: 'image/1Dy5J8bYNKvYwKu7OwJN.jpg', thumb: 'image/thumb/1Dy5J8bYNKvYwKu7OwJN.jpg'}
+        ];
+        djViewer.load();
+        djViewer.view('0fIACXzBA2j2eaj7GKJ4');
+
+
+
+
+    });
+
+    $(window).resize(function() {
+        console.log(screen.width);
+        console.log($(this).width());
+        $(".dj-viewer-wrap").css({width: $(this).width()+"px", height: $(this).height()+"px"});
+    });
+</script>
+</body>
+</html>

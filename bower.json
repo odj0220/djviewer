@@ -1,0 +1,25 @@
+{
+  "name": "djviewer",
+  "description": "image viewer",
+  "main": "dist/djviewer",
+  "keywords": [
+    "djcloud","image viewer"
+  ],
+  "version": "0.1.0",
+  "authors": [
+    "Dongjin <odj0220@nate.com>"
+  ],
+  "license": "MIT",
+  "homepage": "www.djcloud.co.kr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "example"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

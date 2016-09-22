@@ -1,4 +1,4 @@
-.dj-viewer-wrap{width: 100%; height: 100%; background: rgb(38, 38, 38); position: fixed; top: 0; left:0; width: 0; height: 0; z-index: 2000;}
+#dj-viewer-wrap{width: 100%; height: 100%; background: rgb(38, 38, 38); position: fixed; top: 0; left:0; width: 0; height: 0; z-index: 2000;}
 .dj-viewer-top{background-color:rgba(0, 0, 0, 0);background-image:linear-gradient(rgba(0, 0, 0, 0.65098) 0%, transparent 100%);background-origin:padding-box;background-size:auto;color:rgb(255, 255, 255);display:block;height:56px;left:0px;opacity:1;position:absolute;right:0px;top:0px;visibility:visible;width:100%;z-index:3;}
 .dj-viewer-top > div {width: 33%;display: inline-block; height: 100%; float: left; padding: 10px 20px;}
 .dj-viewer-top-left > div, .dj-viewer-top-center > div > div, .dj-viewer-top-right > div {height: 36px;line-height: 40px;width: 36px;color: #fff;font-size: 20px;font-weight: bold;float: left;text-align: center;margin: 0 5px;}

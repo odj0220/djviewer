@@ -13,10 +13,10 @@
         djViewer.canvas = {};
 
         djViewer.init = function(){
-            if(document.getElementById('dj_viewer_wrap')){
-                document.body.removeChild(document.getElementById('dj_viewer_wrap'));
+            if(document.getElementById('dj-viewer-wrap')){
+                document.body.removeChild(document.getElementById('dj-viewer-wrap'));
             }
-            var str = '<div class="dj-viewer-wrap"><div class="dj-viewer-top"><div class="dj-viewer-top-left"><div id="dj-viewer-print" onclick="djViewer.config.print()"><span class="glyphicon glyphicon-print"></span></div><div><a id="dj-viewer-download"><span class="glyphicon glyphicon-download-alt"></span></a></div></div><div class="dj-viewer-top-center"><div><div onclick="djViewer.zoomIn()" id="dj-view-zoom-in"><span class="glyphicon glyphicon-zoom-in"></span></div><div onclick="djViewer.zoomOut()" id="dj-view-zoom-out"><span class="glyphicon glyphicon-zoom-out"></span></div></div></div><div class="dj-viewer-top-right"><div onclick="djViewer.init()"><span class="glyphicon glyphicon-remove"></span></div></div></div><div class="dj-viewer-right"><a type="button" class="btn btn-default btn-circle btn-lg" onclick="djViewer.next()"><span class="glyphicon glyphicon-chevron-right"></span></a></div><div class="dj-viewer-bottom"></div><div class="dj-viewer-left"><a type="button" class="btn btn-default btn-circle btn-lg" onclick="djViewer.prev()"><span class="glyphicon glyphicon-chevron-left"></span></a></div><div class="dj-viewer-center"><canvas id="dj-view-canvas"></canvas></div></div>';
+            var str = '<div id="dj-viewer-wrap"><div class="dj-viewer-top"><div class="dj-viewer-top-left"><div id="dj-viewer-print" onclick="djViewer.config.print()"><span class="glyphicon glyphicon-print"></span></div><div><a id="dj-viewer-download"><span class="glyphicon glyphicon-download-alt"></span></a></div></div><div class="dj-viewer-top-center"><div><div onclick="djViewer.zoomIn()" id="dj-view-zoom-in"><span class="glyphicon glyphicon-zoom-in"></span></div><div onclick="djViewer.zoomOut()" id="dj-view-zoom-out"><span class="glyphicon glyphicon-zoom-out"></span></div></div></div><div class="dj-viewer-top-right"><div onclick="djViewer.init()"><span class="glyphicon glyphicon-remove"></span></div></div></div><div class="dj-viewer-right"><a type="button" class="btn btn-default btn-circle btn-lg" onclick="djViewer.next()"><span class="glyphicon glyphicon-chevron-right"></span></a></div><div class="dj-viewer-bottom"></div><div class="dj-viewer-left"><a type="button" class="btn btn-default btn-circle btn-lg" onclick="djViewer.prev()"><span class="glyphicon glyphicon-chevron-left"></span></a></div><div class="dj-viewer-center"><canvas id="dj-view-canvas"></canvas></div></div>';
             $('body').append(str);
             viewInit();
         };
@@ -56,7 +56,7 @@
 
         djViewer.view = function(code){
             // display on
-            $(".dj-viewer-wrap").css("display", "block");
+            $("#dj-viewer-wrap").css("display", "block");
             var src = "";
             var imgObj = "";
             var select;
@@ -224,9 +224,9 @@
 
         function viewInit() {
             // display none
-            $(".dj-viewer-wrap").css("display", "none");
+            $("#dj-viewer-wrap").css("display", "none");
             // 사이즈 풀로 조절
-            $(".dj-viewer-wrap").css({width: $(document).width()+"px", height: $(document).height()+"px"});
+            $("#dj-viewer-wrap").css({width: $(document).width()+"px", height: $(document).height()+"px"});
 
             // 프린트 버튼 기본 설정
             djViewer.config.print = function(){
